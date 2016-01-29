@@ -10,7 +10,7 @@ The project integrates [Graphviz](http://www.graphviz.org/) into [Fitnesse](http
 ```
 {{{
 Plugins = com.github.sbellus.fitnesse.graphviz.GraphvizPlugin
-graphviz.dotExecutable = c:\\Program Files (x86)\\Graphviz2.38\bin\\dot.exe 
+graphviz.dotExecutable = c:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe 
 }}} 
 ```
 
