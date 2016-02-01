@@ -7,7 +7,7 @@ import fitnesse.plugins.PluginFeatureFactoryBase;
 import fitnesse.wikitext.parser.SymbolProvider;
 
 /**
- * Register plantuml symbol.
+ * Register graphviz symbol.
  */
 public class GraphvizPlugin extends PluginFeatureFactoryBase {
     private Properties properties;
