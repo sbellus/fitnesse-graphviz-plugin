@@ -14,6 +14,7 @@ import org.apache.commons.io.IOUtils;
 
 import fitnesse.html.HtmlTag;
 import fitnesse.html.RawHtml;
+import fitnesse.wiki.VariableTool;
 import fitnesse.wikitext.parser.Matcher;
 import fitnesse.wikitext.parser.Maybe;
 import fitnesse.wikitext.parser.Parser;
@@ -62,6 +63,10 @@ public class GraphvizDotSymbol extends SymbolType implements Rule, Translation {
         if (parser.atEnd())
             return Symbol.nothing;
 
+        // replace variables in content
+        VariableTool variableReplacer = new VariableTool(parser.getPage());
+        graphvizDotContext = variableReplacer.replace(graphvizDotContext);
+        
         // get picture attributes
         String width = null;
         String height = null;
