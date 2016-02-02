@@ -17,6 +17,6 @@ public class GraphvizPlugin extends PluginFeatureFactoryBase {
     }
 
     public void registerSymbolTypes(SymbolProvider symbolProvider) throws PluginException {
-        symbolProvider.add(new GraphvizDotSymbol(properties));
+        symbolProvider.add(GraphvizDotSymbol.make(properties));
     }
 }
