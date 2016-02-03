@@ -6,6 +6,7 @@ The project integrates [Graphviz](http://www.graphviz.org/) into [Fitnesse](http
 
 1. Install [Graphviz](http://www.graphviz.org/Download.php) on machine where your Fitnesse is running.
 2. Copy jar file from [this project Releases](https://github.com/sbellus/fitnesse-graphviz-plugin/releases) to plugins directory of your Fitnesse.
+3. Restart Fitnesse
 
 ## Configuration
 
