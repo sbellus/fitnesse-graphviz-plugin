@@ -6,12 +6,15 @@ The project integrates [Graphviz](http://www.graphviz.org/) into [Fitnesse](http
 
 1. Install [Graphviz](http://www.graphviz.org/Download.php) on machine where your Fitnesse is running.
 2. Copy jar file from [this project Releases](https://github.com/sbellus/fitnesse-graphviz-plugin/releases) to plugins directory of your Fitnesse.
-3. Add following lines to plugins.properties of your Fitnesse
+
+## Configuration
+
+The configuration has to be stored in file fitnesse-graphviz-plugin.properties located in same directory as jar file. Usually in plugins directory of your Fitnesse.
+
+### Path to dot executable
+It is optional. The plugin searches for dot executable. You can set dot executable in configuration file.  
 ```
-{{{
-Plugins = com.github.sbellus.fitnesse.graphviz.GraphvizPlugin
-graphviz.dotExecutable = c:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe 
-}}} 
+dotExecutable = c:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe
 ```
 
 # Usage
