@@ -19,7 +19,7 @@ public class GraphvizDotSymbol {
     }
 
     public GraphvizDotSymbol(Properties properties) {
-        convertor = new GraphvizDotConvertor(properties.getProperty("graphviz.dotExecutable"));
+        convertor = new GraphvizDotConvertor(properties.getProperty("dotExecutable"));
         symbol = new GraphicsSymbol("dot", convertor);
     }
 }

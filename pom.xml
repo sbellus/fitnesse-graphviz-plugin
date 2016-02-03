@@ -3,7 +3,7 @@
 
     <groupId>com.github.sbellus</groupId>
     <artifactId>fitnesse-graphviz-plugin</artifactId>
-    <version>0.1</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>fitnesse-graphviz-plugin</name>
@@ -83,7 +83,7 @@
       				<descriptorRefs>
         				<descriptorRef>jar-with-dependencies</descriptorRef>
       				</descriptorRefs>
-					<finalName>${project.artifactId}-${project.version}-standalone</finalName>
+					<finalName>${project.artifactId}</finalName>
 					<attach>false</attach>
         			<appendAssemblyId>false</appendAssemblyId>      				
     			</configuration>

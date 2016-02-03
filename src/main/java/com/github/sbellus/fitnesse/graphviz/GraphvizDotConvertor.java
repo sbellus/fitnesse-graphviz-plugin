@@ -27,7 +27,8 @@ public class GraphvizDotConvertor implements GraphicsWikiToSvgConvertor {
     public GraphicsSvg convert(GraphicsWiki wiki) throws GraphicsWikiToSvgConvertionException   {
         
         if (dotExecutable == null) {
-            throw new GraphicsWikiToSvgConvertionException("The property \"graphviz.dotExecutable\" in plugins.properties MUST BE set and it is not set.");
+            throw new GraphicsWikiToSvgConvertionException(
+                    "dotExecutable has been not found (Is Graphviz installed?) or set in property file fitnesse-graphviz-plugin.properties as variable \"dotExecutable\"");
         }
 
         try {
@@ -56,7 +57,7 @@ public class GraphvizDotConvertor implements GraphicsWikiToSvgConvertor {
             if (exitCode != 0) {
                 InputStream stderr = runner.getErrorStream();
                 String errorText = IOUtils.toString(stderr);
-                throw new GraphicsWikiToSvgConvertionException("Process that converts dot to svg exits with code "
+                throw new GraphicsWikiToSvgConvertionException("Process \"" + dotExecutable + "\" that converts dot to svg exits with code "
                         + exitCode + " and produce following stderr\n\n" + errorText
                         + "\nWhen converting following dot\n" + wiki.getContent());
             }
