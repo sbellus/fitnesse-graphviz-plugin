@@ -9,7 +9,7 @@ The project integrates [Graphviz](http://www.graphviz.org/) into [Fitnesse](http
 
 ## Configuration
 
-The configuration has to be stored in file fitnesse-graphviz-plugin.properties located in same directory as jar file. Usually in plugins directory of your Fitnesse.
+The configuration has to be stored in file ```fitnesse-graphviz-plugin.properties``` located in same directory as jar file. Usually in plugins directory of your Fitnesse.
 
 ### Path to dot executable
 It is optional. The plugin searches for dot executable. You can set dot executable in configuration file.  
