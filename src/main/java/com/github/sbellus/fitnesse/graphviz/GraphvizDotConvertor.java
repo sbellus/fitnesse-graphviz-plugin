@@ -11,11 +11,11 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 
-import com.github.sbellus.fitnesse.graphics.GraphicsProperties;
-import com.github.sbellus.fitnesse.graphics.GraphicsSvg;
-import com.github.sbellus.fitnesse.graphics.GraphicsWiki;
-import com.github.sbellus.fitnesse.graphics.GraphicsWikiToSvgConvertionException;
-import com.github.sbellus.fitnesse.graphics.GraphicsWikiToSvgConvertor;
+import com.github.sbellus.fitnesse.graphviz.graphics.GraphicsProperties;
+import com.github.sbellus.fitnesse.graphviz.graphics.GraphicsSvg;
+import com.github.sbellus.fitnesse.graphviz.graphics.GraphicsWiki;
+import com.github.sbellus.fitnesse.graphviz.graphics.GraphicsWikiToSvgConvertionException;
+import com.github.sbellus.fitnesse.graphviz.graphics.GraphicsWikiToSvgConvertor;
 
 public class GraphvizDotConvertor implements GraphicsWikiToSvgConvertor {
     private String dotExecutable;
@@ -92,8 +92,7 @@ public class GraphvizDotConvertor implements GraphicsWikiToSvgConvertor {
                         .replaceFirst("height=\"" + height + "px\"");
             }
 
-            GraphicsProperties svgProperties = new GraphicsProperties();
-            svgProperties = wiki.getProperties();
+            GraphicsProperties svgProperties = new GraphicsProperties(wiki.getProperties());
             svgProperties.setHeight(height);
             return new GraphicsSvg(svg, svgProperties);
             
