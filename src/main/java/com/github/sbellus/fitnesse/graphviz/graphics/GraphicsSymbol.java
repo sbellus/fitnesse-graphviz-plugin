@@ -28,7 +28,7 @@ public class GraphicsSymbol extends SymbolType implements Rule, Translation {
 
         try {
             GraphicsWiki wikiGraphics = new GraphicsWiki(specifier);
-            wikiGraphics.ParseFromWiki(parser);
+            wikiGraphics.parseFromWiki(parser);
             wikiGraphics.replaceVariables(new GraphicsVariableReplacer(parser.getVariableSource()));
             GraphicsSvg svgGraphics = convertor.convert(wikiGraphics);
             svgGraphics.writeToSymbol(current);
