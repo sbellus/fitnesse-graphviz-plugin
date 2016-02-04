@@ -5,13 +5,37 @@
     <artifactId>fitnesse-graphviz-plugin</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-
+    
     <name>fitnesse-graphviz-plugin</name>
+	<url>https://github.com/sbellus/fitnesse-graphviz-plugin</url>
+	<description>The plugin integrates Graphviz into Fitnesse wiki.</description>
+	
+	<licenses>
+		<license>
+			<name>The MIT License (MIT)</name>
+			<url>https://opensource.org/licenses/MIT</url>
+			<distribution>repo</distribution>
+			<comments>Permissive free software license.</comments>
+		</license>
+	</licenses>
+	
+	<developers>
+		<developer>
+			<name>Stefan Bellus</name>
+			<email>stevo.bellus@gmail.com</email>
+			<url>https://sk.linkedin.com/in/stefanbellus</url>
+		</developer>
+	</developers>	
 
+	<scm>
+		<connection>scm:git:git://github.com/sbellus/fitnesse-graphviz-plugin.git</connection>
+		<url>https://github.com/sbellus/fitnesse-graphviz-plugin.git</url>
+		<developerConnection>scm:git:git://github.com/sbellus/fitnesse-graphviz-plugin.git</developerConnection>
+	</scm>
+	
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 
     <dependencies>
         <dependency>
