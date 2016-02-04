@@ -31,7 +31,7 @@ public class GraphicsSymbol extends SymbolType implements Rule, Translation {
             wikiGraphics.ParseFromWiki(parser);
             wikiGraphics.replaceVariables(new GraphicsVariableReplacer(parser.getVariableSource()));
             GraphicsSvg svgGraphics = convertor.convert(wikiGraphics);
-            svgGraphics.WriteToSymbol(current);
+            svgGraphics.writeToSymbol(current);
         } catch (Exception exception) {
             Symbol error = new Symbol(new Preformat(), "").add(exception.getLocalizedMessage());
             return new Maybe<Symbol>(error);
@@ -42,7 +42,7 @@ public class GraphicsSymbol extends SymbolType implements Rule, Translation {
 
     public String toTarget(Translator translator, Symbol symbol) {
         GraphicsSvg svgGraphics = new GraphicsSvg();
-        svgGraphics.ReadFromSymbol(symbol);
+        svgGraphics.readFromSymbol(symbol);
         return svgGraphics.toHtml();
     }
 }

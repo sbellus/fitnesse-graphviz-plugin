@@ -64,7 +64,7 @@ public class GraphvizDotFinder {
         return higherVersion(dots);
     }
 
-    static File higherVersion(List<File> dots) {
+    private static File higherVersion(List<File> dots) {
         if (dots.size() == 0) {
             return null;
         }

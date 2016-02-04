@@ -34,7 +34,7 @@ public class GraphicsWiki {
             throw new GraphicsWikiParserException("No content for " + specifier);
         }
 
-        properties.ReadFromLine(propertiesText);
+        properties.readFromLine(propertiesText);
     }
 
     public void replaceVariables(GraphicsVariableReplacer replacer) {
