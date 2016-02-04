@@ -49,4 +49,4 @@ It starts dot executable with arguments ```dot -Tsvg <generated dot file>```.
 It inserts stdout from dot execution into Fitnesse page.   
 
 # Thanks
-I would like to thank [Tibor Trnovsky](https://sk.linkedin.com/in/tibor-trnovsky-b9774744) for idea how align picture in HTML with <div> tags [GraphicsSvg.java](https://github.com/sbellus/fitnesse-graphviz-plugin/blob/master/src/main/java/com/github/sbellus/fitnesse/graphviz/graphics/GraphicsSvg.java).
+I would like to thank [Tibor Trnovsky](https://sk.linkedin.com/in/tibor-trnovsky-b9774744) for idea how align picture in HTML with ```<div>``` tags ([GraphicsSvg.java](https://github.com/sbellus/fitnesse-graphviz-plugin/blob/master/src/main/java/com/github/sbellus/fitnesse/graphviz/graphics/GraphicsSvg.java)).
