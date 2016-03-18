@@ -12,9 +12,24 @@ public class GraphvizDotFinder {
     
     public String findDot() {
         if (SystemUtils.IS_OS_LINUX) {
-            return findLinuxDot().getAbsolutePath();
+            
+            File dot = findLinuxDot();
+            if (dot != null)
+            {
+                return dot.getAbsolutePath(); 
+            }
+            
+            return null;
+            
         } else if (SystemUtils.IS_OS_WINDOWS) {
-            return findWindowsDotExe().getAbsolutePath();
+            
+            File dot = findWindowsDotExe();
+            if (dot != null)
+            {
+                return dot.getAbsolutePath(); 
+            }
+            
+            return null;
         }
         
         return null;
