@@ -39,6 +39,7 @@ public class GraphicsWiki {
 
     public void replaceVariables(GraphicsVariableReplacer replacer) {
         content = replacer.replaceVariablesIn(content);
+        properties.replaceVariables(replacer);
     }
 
     public String getContent() {

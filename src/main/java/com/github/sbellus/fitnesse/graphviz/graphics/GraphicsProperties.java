@@ -113,4 +113,8 @@ public class GraphicsProperties {
             symbol.putProperty(SymbolPropertyAligment, alignment);
         }
     }
+    
+    public void replaceVariables(GraphicsVariableReplacer replacer) {
+        caption = replacer.replaceVariablesIn(caption);
+    }
 }
