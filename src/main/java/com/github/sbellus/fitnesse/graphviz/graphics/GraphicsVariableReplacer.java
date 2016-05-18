@@ -20,11 +20,14 @@ public class GraphicsVariableReplacer {
 
     public String replaceVariablesIn(String str) {
         recursionDepth = 0;
-        return replaceVariablesRecursively(str);
+        if (str != null) {
+            return replaceVariablesRecursively(str);
+        }
+
+        return str;
     }
 
     private String replaceVariablesRecursively(String str) {
-        boolean isAtLeastOneVariableReplaced = false;
         java.util.regex.Matcher m = VariablePattern.matcher(str);
         while (m.find()) {
             String var = m.group();
@@ -35,21 +38,22 @@ public class GraphicsVariableReplacer {
                 varName = varName.replace("-REGRACE", "");
                 regrace = true;
             }
-                
+
             Maybe<String> value = variableSource.findVariable(varName);
             if (!value.isNothing()) {
-                isAtLeastOneVariableReplaced = true;
                 String varValue = value.getValue();
+                if (recursionDepth < MaxRecursionDepth) {
+                    recursionDepth++;
+                    varValue = replaceVariablesRecursively(varValue);
+                    recursionDepth--;
+                }
+
                 if (regrace) {
                     varValue = GracefulNamer.regrace(varValue);
                 }
+
                 str = str.replace(var, varValue);
             }
-        }
-
-        if (isAtLeastOneVariableReplaced && recursionDepth < MaxRecursionDepth) {
-            recursionDepth++;
-            return replaceVariablesRecursively(str);
         }
 
         return str;
