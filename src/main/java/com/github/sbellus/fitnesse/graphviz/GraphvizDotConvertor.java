@@ -42,7 +42,7 @@ public class GraphvizDotConvertor implements GraphicsWikiToSvgConvertor {
             String dotPath = FilenameUtils.getFullPath(dotFile.toString());
 
             Process runner = Runtime.getRuntime().exec(
-                    new String[] { "cmd.exe", "/c", dotExecutable, "-Tsvg", dotFile.getName() }, null,
+                    new String[] { dotExecutable, "-Tsvg", dotFile.getName() }, null,
                     new File(dotPath));
 
             InputStream stdout = runner.getInputStream();
